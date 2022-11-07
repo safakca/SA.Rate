@@ -28,10 +28,7 @@ public class DatabaseContext : DbContext
 
         modelBuilder.ApplyConfiguration(new RateResultConfiguration());
         modelBuilder.ApplyConfiguration(new RateResultDetailConfiguration());
-
-        //modelBuilder.ApplyConfiguration(new TaskConfiguration()); 
-        //modelBuilder.ApplyConfiguration(new UserConfiguration());
-        //modelBuilder.ApplyConfiguration(new CustomerConfiguration());
+         
     }
 
 
@@ -40,10 +37,6 @@ public class DatabaseContext : DbContext
     public DbSet<Translation> Translations { get; set; }
     public DbSet<RateResult> RateResults { get; set; }
     public DbSet<RateResultDetail> RateResultDetails { get; set; }
-
-    //public DbSet<Tasks> Tasks{ get; set; }   
-    //public DbSet<User> Users{ get; set; }  
-    //public DbSet<Customer> Customers { get; set; }  
-
+     
 }
 

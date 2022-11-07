@@ -10,12 +10,7 @@ public class RateConfiguration : IEntityTypeConfiguration<Rate>
         builder.HasKey(x => x.Id);
 
         builder.Property(x => x.Stopped)
-               .HasColumnName("Stopped");
-
-        //builder.HasMany(x => x.RateQNs)
-        //       .WithOne(x => x.Rate)
-        //       .HasForeignKey(x => x.RateId)
-        //       .OnDelete(DeleteBehavior.Cascade); 
+               .HasColumnName("Stopped"); 
 
         builder.HasData(new Rate[]
         {

@@ -16,12 +16,7 @@ public class RateQNConfiguration : IEntityTypeConfiguration<RateQN>
         //builder.HasOne(x => x.Rate)
         //       .WithMany(x => x.RateQNs)
         //       .HasForeignKey(x => x.RateId)
-        //       .OnDelete(DeleteBehavior.Cascade);
-
-        //builder.HasOne(x => x.Translation)
-        //       .WithOne(x => x.RateQN)
-        //       .HasForeignKey<RateQN>(x => x.TranslationId)
-        //       .OnDelete(DeleteBehavior.Cascade);
+        //       .OnDelete(DeleteBehavior.Cascade); 
 
         //builder.HasOne(d => d.Translation)
         //           .WithMany(p => p.RateQNs)

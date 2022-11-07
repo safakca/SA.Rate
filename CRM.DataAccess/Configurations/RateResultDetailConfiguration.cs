@@ -12,11 +12,7 @@ public class RateResultDetailConfiguration : IEntityTypeConfiguration<RateResult
 
         builder.Property(x => x.ValueInt).HasColumnName("ValueInt");
         builder.Property(x => x.ValueString).HasColumnName("ValueString");
-
-        //builder.HasOne(x => x.RateResult).WithMany(x => x.RateResultDetails).HasForeignKey(x => x.RateResultId).OnDelete(DeleteBehavior.Cascade);
-    //    builder.HasOne(x => x.RateQN).WithMany(x => x.RateResultDetails).HasForeignKey(x => x.RateQNId).OnDelete(DeleteBehavior.Cascade);
-
-
+         
         builder.HasData(new RateResultDetail[]
         {
             new() { Id=1,RateQNId=1, ValueInt=1, ValueString="test1", RateResultId=1},

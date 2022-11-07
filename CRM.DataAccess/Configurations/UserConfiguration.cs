@@ -12,8 +12,6 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.Property(x => x.Name).HasColumnName("Name");
 
-      //  builder.HasMany(x => x.RateResults).WithOne(x => x.User).HasForeignKey(x => x.CreatedBy).OnDelete(DeleteBehavior.Cascade);
-
         builder.HasData(new User[]
         {
             new() { Id=1, Name="Username1"}, 

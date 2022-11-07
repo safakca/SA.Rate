@@ -11,9 +11,7 @@ public class CustomerConfiguration : IEntityTypeConfiguration<Customer>
         builder.HasKey(x => x.Id);
 
         builder.Property(x => x.Name).HasColumnName("Name");
-
-        //builder.HasMany(x => x.RateResults).WithOne(x => x.Customer).HasForeignKey(x => x.CustomerId).OnDelete(DeleteBehavior.Cascade);
-
+         
         builder.HasData(new Customer[]
         {
             new() { Id=1, Name="Customer1"},

@@ -12,9 +12,7 @@ public class RatesByRateQNController : ControllerBase
     public RatesByRateQNController(IRateDal rateDal)
     {
         _rateDal = rateDal;
-    }
-    // TODO: rate ve rateQn icin sadece get yapilacak seed data dan
-    // TODO: rateResult ve detail icin post islemide yapilacak DTO kullanarak bi endPointte 2 tabloya kayit atabilirsin
+    } 
 
     [HttpGet("GetRatesByRateQuestionAll")]
     public IActionResult GetAll()
@@ -29,33 +27,6 @@ public class RatesByRateQNController : ControllerBase
         var result = _rateDal.GetRatesByRateQuestion(id);
         return Ok(result);
     } 
-
-    //[HttpGet("GetByFilterRate")]
-    //public IActionResult GetByFilter(int id)
-    //{
-    //    var result = _rateDal.GetByFilter(x => x.Id == id);
-    //    return Ok(result);
-    //}
-
-    //[HttpPost("InsertRate")]
-    //public IActionResult Create([FromBody] Rate rate)
-    //{
-    //    _rateDal.Add(rate);
-    //    return Ok();
-    //}
-
-    //[HttpPut("UpdateRate")]
-    //public IActionResult Update([FromBody] Rate rate)
-    //{
-    //    _rateDal.Update(rate);
-    //    return Ok();
-    //}
-
-    //[HttpDelete("RemoveRate")]
-    //public IActionResult Remove(Rate rate)
-    //{
-    //    _rateDal.Delete(rate);
-    //    return Ok();
-    //}
+     
 }
 
